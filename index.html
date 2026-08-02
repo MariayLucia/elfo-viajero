@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartas Personalizadas del Elfo Viajero | Regala Magia esta Navidad</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Caveat:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        elf: {
+                            green: '#0F382C',
+                            lightgreen: '#1B5E4B',
+                            red: '#C82333',
+                            brightred: '#E63946',
+                            gold: '#D4AF37',
+                            lightgold: '#F4E0A5',
+                            cream: '#FCF8F2',
+                            parchment: '#F5EFE0',
+                            charcoal: '#1E293B'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        serif: ['"Cinzel"', 'serif'],
+                        handwriting: ['"Caveat"', 'cursive']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        .snow-overlay {
+            background-image: radial-gradient(4px 4px at 20px 30px, rgba(255, 255, 255, 0.8), rgba(0, 0, 0, 0)),
+                              radial-gradient(3px 3px at 40px 70px, rgba(255, 255, 255, 0.7), rgba(0, 0, 0, 0)),
+                              radial-gradient(5px 5px at 90px 40px, rgba(255, 255, 255, 0.9), rgba(0, 0, 0, 0)),
+                              radial-gradient(4px 4px at 160px 120px, rgba(255, 255, 255, 0.6), rgba(0, 0, 0, 0));
+            background-repeat: repeat;
+            background-size: 200px 200px;
+            animation: snow 12s linear infinite;
+        }
+
+        @keyframes snow {
+            0% { background-position: 0 0, 0 0, 0 0, 0 0; }
+            100% { background-position: 200px 400px, 100px 300px, -100px 200px, 300px 500px; }
+        }
+
+        .wax-seal {
+            background: radial-gradient(circle at 30% 30%, #e63946, #800f2f);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3), inset 0 2px 4px rgba(255,255,255,0.4);
+        }
+
+        .parchment-texture {
+            background-color: #fcf8f2;
+            background-image: radial-gradient(#e5d9c5 0.75px, transparent 0.75px), radial-gradient(#e5d9c5 0.75px, #fcf8f2 0.75px);
+            background-size: 30px 30px;
+            background-position: 0 0, 15px 15px;
+        }
+
+        .gold-border {
+            border: 2px solid #D4AF37;
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
+        }
+
+        .cta-glow {
+            box-shadow: 0 0 25px rgba(230, 57, 70, 0.5);
+            transition: all 0.3s ease;
+        }
+        .cta-glow:hover {
+            box-shadow: 0 0 35px rgba(230, 57, 70, 0.8);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body class="bg-elf-cream text-elf-charcoal font-sans antialiased selection:bg-elf-gold selection:text-elf-green">
+
+    <div class="bg-elf-red text-white text-xs md:text-sm font-semibold py-2.5 px-4 text-center relative z-50 shadow-md">
+        <div class="max-w-7xl mx-auto flex items-center justify-center gap-2 flex-wrap">
+            <span class="inline-block animate-bounce">🎄</span>
+            <span><strong>¡Lanzamiento Navidad 2026!</strong> Las primeras 5 personas lo reciben <span class="underline decoration-elf-gold decoration-2 font-black uppercase">100% GRATIS</span></span>
+            <span class="bg-white/20 backdrop-blur-md px-2.5 py-0.5 rounded-full text-xs font-mono ml-2">Quedan 2 disponibles</span>
+        </div>
+    </div>
+
+    <nav class="sticky top-0 bg-elf-green/95 backdrop-blur-md border-b border-elf-gold/30 text-white z-40 py-3.5 px-4 md:px-8 transition-all">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <a href="#" class="flex items-center gap-2.5">
+                <div class="w-10 h-10 rounded-full bg-elf-gold flex items-center justify-center text-elf-green font-bold text-xl shadow-lg">
+                    <i class="fa-solid font-serif">🎄</i>
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-serif font-bold text-lg leading-none tracking-wide text-elf-lightgold">El Elfo Viajero</span>
+                    <span class="text-[10px] text-white/80 uppercase tracking-widest font-medium">Cartas Mágicas de Navidad</span>
+                </div>
+            </a>
+
+            <div class="hidden md:flex items-center space-x-6 text-sm font-medium">
+                <a href="#solucion" class="hover:text-elf-lightgold transition">¿Por qué funciona?</a>
+                <a href="#como-funciona" class="hover:text-elf-lightgold transition">¿Cómo funciona?</a>
+                <a href="#precios" class="hover:text-elf-lightgold transition">Opciones y Precios</a>
+                <a href="#faq" class="hover:text-elf-lightgold transition">Preguntas Frecuentes</a>
+            </div>
+
+            <a href="#precios" class="bg-elf-brightred hover:bg-red-600 text-white font-bold text-xs md:text-sm px-4 md:px-5 py-2.5 rounded-full shadow-lg transition transform hover:scale-105 flex items-center gap-2">
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+                <span>Reservar Magia</span>
+            </a>
+        </div>
+    </nav>
+
+    <header class="relative bg-gradient-to-b from-elf-green via-elf-green to-elf-lightgreen text-white overflow-hidden pt-8 pb-16 md:py-20">
+        <div class="absolute inset-0 snow-overlay opacity-40 pointer-events-none"></div>
+        <div class="absolute -top-24 -right-24 w-96 h-96 bg-elf-gold/10 rounded-full blur-3xl pointer-events-none"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+                
+                <!-- Hero Left Column -->
+                <div class="lg:col-span-5 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 bg-elf-gold/20 border border-elf-gold/40 text-elf-lightgold text-xs md:text-sm font-semibold px-4 py-2 rounded-full mb-6 shadow-sm">
+                        <span>✨ Experiencia Navideña Interactiva</span>
+                    </div>
+
+                    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold leading-tight md:leading-tight tracking-tight text-white mb-6">
+                        Cambia las pantallas este diciembre por la emoción de abrir una carta con su nombre cada mañana.
+                    </h1>
+
+                    <p class="text-lg md:text-xl text-white/90 font-light mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                        La experiencia mágica en la que un <strong class="text-elf-lightgold font-semibold">Elfo le escribe 25 cartas 100% personalizadas</strong> a tu peque, contándole cada día la aventura de su viaje hasta llegar a vuestra casa el 25 de diciembre junto a Papá Noel.
+                    </p>
+
+                    <!-- CTA Action Box -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mb-6">
+                        <a href="#precios" class="w-full sm:w-auto bg-elf-brightred hover:bg-red-600 text-white font-extrabold text-base md:text-lg px-8 py-4 rounded-full cta-glow flex items-center justify-center gap-3 text-center">
+                            <span>¡Quiero reservar la magia de mi peque antes de que se agoten!</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <div class="inline-flex items-center gap-2 text-xs md:text-sm text-yellow-300 font-medium bg-black/30 backdrop-blur-sm px-4 py-2.5 rounded-lg border border-yellow-500/30">
+                        <i class="fa-solid fa-bolt text-yellow-400 text-base"></i>
+                        <span><strong>¡Atención!</strong> Al ser un producto artesanal y personalizado, solo aceptamos un número limitado de pedidos por semana.</span>
+                    </div>
+
+                    <!-- Social Proof Chips -->
+                    <div class="mt-8 pt-8 border-t border-white/10 flex flex-wrap items-center justify-center lg:justify-start gap-6 text-xs text-white/80">
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-check-circle text-elf-gold"></i>
+                            <span>25 Cartas Únicas</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-check-circle text-elf-gold"></i>
+                            <span>100% Personalizado</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-check-circle text-elf-gold"></i>
+                            <span>Fomenta la lectura autónoma</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7">
+                    <div class="relative bg-elf-parchment text-elf-charcoal p-5 sm:p-6 rounded-2xl shadow-2xl border-2 border-elf-gold/60 parchment-texture flex flex-col justify-between max-w-md lg:max-w-lg mx-auto transform -rotate-2 hover:rotate-0 transition-transform duration-300">
+                        
+                        <!-- Letter Header with Stamp -->
+                        <div class="flex items-start justify-between border-b border-elf-charcoal/10 pb-3 mb-3">
+                            <div>
+                                <span class="text-[10px] sm:text-xs font-serif uppercase tracking-widest text-elf-red font-bold">Correo Oficial del Polo Norte ❄️</span>
+                                <h3 class="font-serif font-bold text-lg text-elf-green">Carta nº 01 - El Viaje Comienza</h3>
+                            </div>
+                            <div class="w-10 h-12 border-2 border-dashed border-elf-red/40 rounded flex flex-col items-center justify-center bg-red-50 p-1 text-center shrink-0">
+                                <i class="fa-solid fa-snowflake text-elf-red text-xs"></i>
+                                <span class="text-[7px] font-bold text-elf-red uppercase mt-0.5">POLO NORTE</span>
+                            </div>
+                        </div>
+
+                        <!-- Letter Body Content -->
+                        <div class="font-handwriting text-xl sm:text-2xl leading-relaxed text-elf-charcoal max-h-[420px] overflow-y-auto bg-white/50 p-4 rounded-lg border border-elf-gold/20 space-y-3 pr-2 scrollbar-thin">
+                            <p><strong class="text-elf-red font-bold">Queridísima Lucía:</strong></p>
+                            <p>¡Ay por las barbas nevadas de Papá Noel… ya la he liado!</p>
+                            <p>Soy <strong class="text-elf-green">Pikku-Lumi</strong>, la elfa que Papá Noel eligió para viajar a tu casa en Móstoles y acompañarte estas Navidades. Tenía que haber llegado hoy, peeeero… ¿cómo voy a ir directa si entre Laponia y Móstoles hay un montón de lugares mágicos y humanos superinteresantes?</p>
+                            <p><strong class="text-elf-red">Im-posible.</strong></p>
+                            <p>Además, tú tienes pinta de ser una niña que investiga, pregunta y quiere saberlo TODO, así que… ¿cómo no voy a compartir contigo mi aventura?</p>
+                            
+                            <p class="pt-2"><strong>Te aviso:</strong></p>
+                            <p>Necesito que no le digas a Papá Noel que estoy tardando un poquito más de lo normal.</p>
+                            <p class="italic text-gray-700">(Si se entera, me pone a ordenar calcetines mágicos durante semanas… ¡y son infinitos!).</p>
+                            
+                            <p>Así que he decidido enviarte una carta cada vez que llegue a un sitio nuevo, contándote dónde estoy, qué he visto y qué travesura ha provocado mi “Descontrol de Chispa” (mi magia torpe…)</p>
+                            <p>Y además, en cada carta te mandaré un reto especial, porque sé que te encantan los misterios, los juegos y usar esa cabeza brillante que tienes.</p>
+                            
+                            <p>Hoy sigo aún en Laponia, preparando la mochila.</p>
+                            <p>Abrí el saco de viaje para meter ropa y… <strong class="text-elf-brightred">¡BOOM!</strong></p>
+                            <p>Mi magia se emocionó.</p>
+                            <p>Ahora tengo el gorro dentro de la bota, la bota dentro del abrigo, el abrigo dentro del saco y… el saco encima de mi cabeza.</p>
+                            <p>No sé cómo lo hago.</p>
+                            <p>Pero ya estoy lista.</p>
+                            <p>Mañana empiezo a moverme y te mandaré mi primera carta “en ruta”.</p>
+
+                            <div class="bg-elf-cream/80 p-3.5 rounded-lg border border-elf-gold/40 my-2 text-lg sm:text-xl">
+                                <p class="font-bold text-elf-green">🔍 Mini Reto 1: El enigma del mapa enrollado</p>
+                                <p class="mt-1">Antes de salir, he encontrado un mapa antiguo. Pero está enrollado con un lazo que solo se abre si contestas este acertijo:</p>
+                                <p class="italic my-1.5 text-elf-red font-bold text-center">“Tengo ciudades pero no casas,<br>tengo montañas pero no árboles,<br>tengo ríos pero no agua…<br>¿Qué soy?”</p>
+                                <p>Cuando sepas la respuesta… ¡boom! 🗺️</p>
+                                <p>Se abrirá mágicamente y podré empezar el camino.</p>
+                                <p class="font-bold text-elf-green mt-1">¿Me ayudas?</p>
+                            </div>
+
+                            <p class="pt-1">Tu elfa traviesa,</p>
+                            <p class="font-bold text-elf-red text-2xl">Pikku-Lumi ❄️✨</p>
+                        </div>
+
+                        <!-- Wax Seal Bottom -->
+                        <div class="mt-4 pt-3 border-t border-elf-charcoal/10 flex items-center justify-between">
+                            <div class="flex items-center gap-2">
+                                <div class="w-8 h-8 rounded-full wax-seal flex items-center justify-center text-white text-[10px] font-serif font-bold border border-white/40 shadow">
+                                    PN
+                                </div>
+                                <span class="text-[11px] font-serif font-bold text-elf-green">Sello de Autenticidad Élfica</span>
+                            </div>
+                            <span class="text-[10px] text-gray-500 italic">25 Días de Ilusión</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <section id="solucion" class="py-16 md:py-24 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-elf-red font-bold text-sm uppercase tracking-widest bg-red-50 px-3 py-1 rounded-full border border-red-200">El contraste de diciembre</span>
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-elf-green mt-3 mb-4">
+                    ¿Te suena familiar esta escena de diciembre?
+                </h2>
+                <p class="text-gray-600 text-base md:text-lg">
+                    Llegas a casa cansado después de trabajar. Es la hora de la cena y empieza la batalla de todos los días:
+                </p>
+            </div>
+
+            <!-- Problem Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+                <div class="bg-red-50/70 border border-red-200 p-6 rounded-2xl shadow-sm hover:shadow-md transition">
+                    <div class="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center text-elf-red text-xl font-bold mb-4">
+                        <i class="fa-solid fa-tablet-screen-button"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-red-900 mb-2">❌ "Apaga ya la tablet."</h3>
+                    <p class="text-sm text-red-700/80 leading-relaxed">
+                        Horas de exposición a pantallas que provocan rabietas al intentar desconectarlos para cenar o ir a dormir.
+                    </p>
+                </div>
+
+                <div class="bg-red-50/70 border border-red-200 p-6 rounded-2xl shadow-sm hover:shadow-md transition">
+                    <div class="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center text-elf-red text-xl font-bold mb-4">
+                        <i class="fa-solid fa-tv"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-red-900 mb-2">❌ "Solo cinco minutos más de tele."</h3>
+                    <p class="text-sm text-red-700/80 leading-relaxed">
+                        Negociaciones infinitas cada tarde que terminan en discusiones estresantes justo antes de acabar la jornada.
+                    </p>
+                </div>
+
+                <div class="bg-red-50/70 border border-red-200 p-6 rounded-2xl shadow-sm hover:shadow-md transition">
+                    <div class="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center text-elf-red text-xl font-bold mb-4">
+                        <i class="fa-solid fa-heart-crack"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-red-900 mb-2">❌ Culpa y falta de tiempo</h3>
+                    <p class="text-sm text-red-700/80 leading-relaxed">
+                        Discusiones por la noche y esa pesada sensación de culpa por no saber cómo despegarlo de las pantallas y regalarle recuerdos mágicos.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Empathy Callout -->
+            <div class="bg-elf-parchment rounded-2xl p-6 md:p-8 border border-elf-gold/40 text-center max-w-4xl mx-auto mb-16 shadow-inner">
+                <p class="text-elf-charcoal text-base md:text-lg italic font-serif">
+                    "Quieres regalarle recuerdos mágicos de verdad, de esos que recordará de adulto, pero entre el trabajo, las compras y el cansancio... <strong class="text-elf-red not-italic font-sans">simplemente no te da la vida para inventar juegos complicados."</strong>
+                </p>
+            </div>
+
+            <div class="bg-gradient-to-br from-elf-green to-elf-lightgreen text-white rounded-3xl p-8 md:p-12 shadow-2xl relative overflow-hidden">
+                <div class="absolute -right-10 -bottom-10 opacity-10 text-9xl text-white font-serif pointer-events-none">
+                    🎄
+                </div>
+
+                <div class="max-w-3xl">
+                    <span class="inline-block bg-elf-gold text-elf-green font-extrabold text-xs uppercase px-3 py-1 rounded-full mb-4">
+                        La Solución "Llave en Mano"
+                    </span>
+                    <h3 class="text-2xl md:text-4xl font-serif font-bold mb-6">
+                        5 minutos de lectura diaria sin peleas
+                    </h3>
+                    <p class="text-white/90 text-base md:text-lg mb-8 leading-relaxed">
+                        Imagina esto durante todo el mes de diciembre:
+                    </p>
+
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-4 bg-white/10 backdrop-blur-md p-4 rounded-xl border border-white/10">
+                            <div class="w-8 h-8 rounded-full bg-elf-gold text-elf-green font-bold flex items-center justify-center shrink-0 mt-0.5">
+                                1
+                            </div>
+                            <p class="text-sm md:text-base text-white">
+                                Tu peque se despierta entusiasmado <strong>(sin necesidad de llamarlo tres veces)</strong>.
+                            </p>
+                        </div>
+
+                        <div class="flex items-start gap-4 bg-white/10 backdrop-blur-md p-4 rounded-xl border border-white/10">
+                            <div class="w-8 h-8 rounded-full bg-elf-gold text-elf-green font-bold flex items-center justify-center shrink-0 mt-0.5">
+                                2
+                            </div>
+                            <p class="text-sm md:text-base text-white">
+                                Corre a buscar el rincón de la casa donde el Elfo Viajero le ha dejado su <strong>carta diaria</strong>.
+                            </p>
+                        </div>
+
+                        <div class="flex items-start gap-4 bg-white/10 backdrop-blur-md p-4 rounded-xl border border-white/10">
+                            <div class="w-8 h-8 rounded-full bg-elf-gold text-elf-green font-bold flex items-center justify-center shrink-0 mt-0.5">
+                                3
+                            </div>
+                            <p class="text-sm md:text-base text-white">
+                                <strong>Lee por sí solo, emocionado</strong>, descubriendo cómo el Elfo va cruzando montañas, haciendo travesuras y mencionando a sus amigos, sus juguetes favoritos y hasta el nombre de tu mascota.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 pt-6 border-t border-white/20 flex items-center gap-3 text-elf-lightgold font-semibold text-sm md:text-base">
+                        <i class="fa-solid fa-sparkles text-lg"></i>
+                        <span>Transforma las pantallas por la lectura autónoma sin mover un solo dedo ni perder horas preparando materiales.</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA Button after Solution Banner -->
+            <div class="mt-10 text-center">
+                <a href="#precios" class="inline-flex bg-elf-brightred hover:bg-red-600 text-white font-extrabold text-base md:text-lg px-8 py-4 rounded-full cta-glow items-center justify-center gap-3 text-center transition duration-300">
+                    <span>Quiero regalarle ese Diciembre a mi peque</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="como-funciona" class="py-16 md:py-24 bg-elf-cream relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-elf-green font-bold text-sm uppercase tracking-widest bg-elf-gold/20 px-3 py-1 rounded-full border border-elf-gold/30">Paso a paso sencillo</span>
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-elf-green mt-3 mb-4">
+                    ¿Cómo funciona?
+                </h2>
+                <p class="text-gray-600 text-base md:text-lg">
+                    Crear la ilusión perfecta solo te llevará <strong>3 minutos</strong>:
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+                
+                <!-- Step 1 -->
+                <div class="bg-white rounded-2xl p-8 border border-elf-gold/30 shadow-lg relative flex flex-col items-center text-center group hover:-translate-y-2 transition duration-300">
+                    <div class="absolute -top-5 bg-elf-green text-elf-lightgold font-serif font-bold text-sm px-4 py-1.5 rounded-full border-2 border-elf-gold shadow-md">
+                        Paso 1
+                    </div>
+                    <div class="w-20 h-20 rounded-full bg-elf-cream flex items-center justify-center text-elf-red text-3xl my-4 group-hover:scale-110 transition">
+                        <i class="fa-solid fa-clipboard-list"></i>
+                    </div>
+                    <h3 class="font-serif font-bold text-xl text-elf-green mb-3">Cuéntanos sobre tu peque</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Te enviaremos por email un breve cuestionario para conocer a tu peque y poder crear sus cartas totalmente personalizadas.
+                    </p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="bg-white rounded-2xl p-8 border border-elf-gold/30 shadow-lg relative flex flex-col items-center text-center group hover:-translate-y-2 transition duration-300">
+                    <div class="absolute -top-5 bg-elf-green text-elf-lightgold font-serif font-bold text-sm px-4 py-1.5 rounded-full border-2 border-elf-gold shadow-md">
+                        Paso 2
+                    </div>
+                    <div class="w-20 h-20 rounded-full bg-elf-cream flex items-center justify-center text-elf-red text-3xl my-4 group-hover:scale-110 transition">
+                        <i class="fa-solid fa-feather-pointed"></i>
+                    </div>
+                    <h3 class="font-serif font-bold text-xl text-elf-green mb-3">El Elfo escribe las cartas</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Personalizamos las 25 historias con sus datos y las preparamos especialmente para ti.
+                    </p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="bg-white rounded-2xl p-8 border border-elf-gold/30 shadow-lg relative flex flex-col items-center text-center group hover:-translate-y-2 transition duration-300">
+                    <div class="absolute -top-5 bg-elf-green text-elf-lightgold font-serif font-bold text-sm px-4 py-1.5 rounded-full border-2 border-elf-gold shadow-md">
+                        Paso 3
+                    </div>
+                    <div class="w-20 h-20 rounded-full bg-elf-cream flex items-center justify-center text-elf-red text-3xl my-4 group-hover:scale-110 transition">
+                        <i class="fa-solid fa-gift"></i>
+                    </div>
+                    <h3 class="font-serif font-bold text-xl text-elf-green mb-3">¡A vivir la magia!</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Cada noche de diciembre pones la carta del día en la entrada, bajo la almohada o en el árbol.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section id="precios" class="py-16 md:py-24 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-elf-red font-bold text-sm uppercase tracking-widest bg-red-50 px-3 py-1 rounded-full border border-red-200">Elige tu experiencia</span>
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-elf-green mt-3 mb-4">
+                    Opciones y Precios
+                </h2>
+                <p class="text-gray-600 text-base md:text-lg">
+                    Elige la aventura ideal para tu hogar este diciembre:
+                </p>
+            </div>
+
+            <!-- Pricing Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch mb-16">
+                
+                <!-- Option 1: Digital -->
+                <div class="bg-white rounded-3xl border-2 border-gray-200 p-8 flex flex-col justify-between hover:border-elf-green transition duration-300 shadow-md relative overflow-hidden">
+                    <div>
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-xs font-bold uppercase tracking-widest text-gray-500">Opción 1</span>
+                            <span class="bg-red-100 text-elf-red text-[11px] font-extrabold uppercase px-2.5 py-1 rounded-full border border-red-200 animate-pulse">
+                                🎁 ¡0€ para los 5 primeros!
+                            </span>
+                        </div>
+                        <h3 class="text-2xl font-serif font-bold text-elf-green mb-2">DIGITAL</h3>
+                        <p class="text-xs text-gray-500 font-medium mb-6">PDF listo para imprimir en casa</p>
+
+                        <div class="mb-6 pb-6 border-b border-gray-100">
+                            <div class="flex items-center gap-3 flex-wrap">
+                                <span class="text-2xl md:text-3xl font-extrabold text-gray-400 line-through">25€</span>
+                                <span class="text-base md:text-lg font-black text-elf-red bg-red-100 px-3 py-1.5 rounded-xl border border-red-300 shadow-sm">
+                                    ¡GRATIS para las 5 primeras personas!
+                                </span>
+                            </div>
+                            <span class="text-xs text-gray-500 block mt-2">Pago único • Acceso instantáneo</span>
+                        </div>
+
+                        <ul class="space-y-3.5 text-sm text-gray-700 mb-8">
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-check text-elf-green font-bold mt-1"></i>
+                                <span>Mazo de <strong>25 cartas personalizadas</strong>.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-check text-elf-green font-bold mt-1"></i>
+                                <span>Formato <strong>PDF de alta resolución</strong>.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-check text-elf-green font-bold mt-1"></i>
+                                <span><strong>Guía práctica para padres</strong> incluida.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-clock text-elf-gold font-bold mt-1"></i>
+                                <span>Entrega rápida en tu email (24-72h).</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <button onclick="openCheckoutModal('Opción 1: DIGITAL (25€ - ¡GRATIS 5 primeros!)')" class="w-full bg-elf-green hover:bg-elf-lightgreen text-white font-bold py-3.5 px-6 rounded-xl transition text-center shadow">
+                        Comprar PDF
+                    </button>
+                </div>
+
+                <!-- Option 2: Físico -->
+                <div class="bg-white rounded-3xl border-2 border-gray-200 p-8 flex flex-col justify-between hover:border-elf-green transition duration-300 shadow-md">
+                    <div>
+                        <div class="text-xs font-bold uppercase tracking-widest text-gray-500 mb-2">Opción 2</div>
+                        <h3 class="text-2xl font-serif font-bold text-elf-green mb-2">FÍSICO</h3>
+                        <p class="text-xs text-gray-500 font-medium mb-6">Cartas impresas enviadas a tu casa</p>
+
+                        <div class="mb-6 pb-6 border-b border-gray-100">
+                            <span class="text-4xl font-extrabold text-elf-green">28€</span>
+                            <span class="text-xs text-gray-500 block mt-1">Envío a domicilio incluido</span>
+                        </div>
+
+                        <ul class="space-y-3.5 text-sm text-gray-700 mb-8">
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-check text-elf-green font-bold mt-1"></i>
+                                <span>Mazo de <strong>25 cartas impresas a todo color</strong>.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-check text-elf-green font-bold mt-1"></i>
+                                <span><strong>Papel de alta calidad</strong> gramaje especial.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-check text-elf-green font-bold mt-1"></i>
+                                <span><strong>Sobres individuales enumerados</strong> del 1 al 25.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-truck text-elf-gold font-bold mt-1"></i>
+                                <span>Entrega en tu casa (~1 semana).</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <button onclick="openCheckoutModal('Opción 2: FÍSICO (28€)')" class="w-full bg-elf-green hover:bg-elf-lightgreen text-white font-bold py-3.5 px-6 rounded-xl transition text-center shadow">
+                        Pedir Físico
+                    </button>
+                </div>
+
+                <!-- Option 3: Físico Premium (FEATURED) -->
+                <div class="bg-elf-parchment rounded-3xl border-2 border-elf-gold p-8 flex flex-col justify-between relative shadow-2xl transform lg:-translate-y-3 gold-border">
+                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-elf-brightred text-white text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full shadow-lg border border-white flex items-center gap-1">
+                        <i class="fa-solid fa-star text-yellow-300"></i>
+                        <span>⭐ Opción Más Mágica</span>
+                    </div>
+
+                    <div>
+                        <div class="text-xs font-bold uppercase tracking-widest text-elf-red mb-2 mt-2">Opción 3</div>
+                        <h3 class="text-2xl font-serif font-bold text-elf-green mb-1">FÍSICO PREMIUM</h3>
+                        <p class="text-xs text-elf-green font-semibold mb-6">Experiencia Inmersiva Completa</p>
+
+                        <div class="mb-6 pb-6 border-b border-elf-gold/30">
+                            <span class="text-5xl font-extrabold text-elf-green">50€</span>
+                            <span class="text-xs text-elf-green/80 block mt-1">Todo incluido + Materiales Exclusivos</span>
+                        </div>
+
+                        <ul class="space-y-3.5 text-sm text-elf-charcoal mb-8 font-medium">
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-check text-elf-red font-bold mt-1"></i>
+                                <span>Mazo completo de <strong>25 cartas impresas premium</strong>.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-check text-elf-red font-bold mt-1"></i>
+                                <span><strong>Foto exclusiva del Elfo</strong> haciendo una travesura durante su viaje.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-check text-elf-red font-bold mt-1"></i>
+                                <span><strong>Mapa desplegable interactivo</strong> del recorrido del Polo Norte.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-truck-fast text-elf-red font-bold mt-1"></i>
+                                <span>Entrega prioritaria a domicilio en casa (~1 semana).</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <button onclick="openCheckoutModal('Opción 3: FÍSICO PREMIUM (50€)')" class="w-full bg-elf-brightred hover:bg-red-600 text-white font-extrabold py-4 px-6 rounded-xl transition text-center shadow-lg cta-glow flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                        <span>¡Quiero la Experiencia Premium!</span>
+                    </button>
+                </div>
+
+            </div>
+
+            <div class="bg-gradient-to-r from-red-600 via-elf-brightred to-red-700 text-white rounded-3xl p-8 md:p-10 shadow-xl border-2 border-elf-gold relative overflow-hidden">
+                <div class="flex flex-col lg:flex-row items-center justify-between gap-6 relative z-10 text-center lg:text-left">
+                    <div class="max-w-2xl">
+                        <span class="inline-block bg-elf-gold text-elf-green font-extrabold text-xs uppercase px-3.5 py-1.5 rounded-full mb-3 shadow">
+                            🎁 OFERTA EXCLUSIVA DE LANZAMIENTO
+                        </span>
+                        <h3 class="text-2xl md:text-3xl lg:text-4xl font-serif font-bold mb-3 text-white">
+                            ¡Consigue las 25 cartas en PDF 100% GRATIS!
+                        </h3>
+                        <p class="text-white/90 text-sm md:text-base leading-relaxed">
+                            Para celebrar el lanzamiento de esta Navidad 2026, <strong>las primeras 5 personas</strong> que reserven se llevan el mazo digital completo de 25 cartas personalizadas en formato PDF totalmente gratis.
+                        </p>
+                    </div>
+
+                    <div class="w-full lg:w-auto shrink-0">
+                        <button onclick="openCheckoutModal('Promoción Lanzamiento: PDF 100% GRATIS (0€)')" class="w-full sm:w-auto bg-elf-gold hover:bg-yellow-400 text-elf-green font-extrabold text-base md:text-lg px-8 py-4 rounded-full shadow-2xl transition transform hover:scale-105 flex items-center justify-center gap-3">
+                            <i class="fa-solid fa-gift text-elf-red text-xl"></i>
+                            <span>Quiero mis 25 cartas GRATIS</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="py-16 md:py-24 bg-elf-cream">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-elf-green mb-4">
+                    ¿Es esta experiencia adecuada para tu familia?
+                </h2>
+                <p class="text-gray-600 text-base">
+                    Queremos asegurarnos de que esta ilusión encaje perfectamente con tus expectativas.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <!-- YES FOR YOU -->
+                <div class="bg-white rounded-3xl p-8 border-2 border-emerald-500/30 shadow-lg relative">
+                    <div class="inline-flex items-center gap-2 bg-emerald-100 text-emerald-800 font-bold text-xs uppercase px-3 py-1.5 rounded-full mb-6">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>Esta experiencia ES para ti si:</span>
+                    </div>
+
+                    <ul class="space-y-4 text-gray-700 text-sm md:text-base">
+                        <li class="flex items-start gap-3">
+                            <span class="text-emerald-500 font-bold text-lg leading-none">✅</span>
+                            <span>Tienes peques de <strong>6 a 10 años</strong> que están perdiendo la inocencia navideña y quieres revivir la magia.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-emerald-500 font-bold text-lg leading-none">✅</span>
+                            <span>Quieres que tu hijo <strong>lea voluntariamente todos los días</strong> con entusiasmo y sin protestas.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-emerald-500 font-bold text-lg leading-none">✅</span>
+                            <span>Buscas una <strong>actividad en familia sin pantallas</strong> que no te exija tiempo ni esfuerzo de preparación.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- NOT FOR YOU -->
+                <div class="bg-white rounded-3xl p-8 border-2 border-red-500/30 shadow-lg relative">
+                    <div class="inline-flex items-center gap-2 bg-red-100 text-red-800 font-bold text-xs uppercase px-3 py-1.5 rounded-full mb-6">
+                        <i class="fa-solid fa-circle-xmark"></i>
+                        <span>Esta experiencia NO es para ti si:</span>
+                    </div>
+
+                    <ul class="space-y-4 text-gray-700 text-sm md:text-base">
+                        <li class="flex items-start gap-3">
+                            <span class="text-red-500 font-bold text-lg leading-none">❌</span>
+                            <span>Buscas cartas genéricas de imprenta donde solo cambian el nombre del niño.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-red-500 font-bold text-lg leading-none">❌</span>
+                            <span>No te importa que tus hijos pasen las tardes de diciembre pegados a las pantallas.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-red-500 font-bold text-lg leading-none">❌</span>
+                            <span><strong>Buscas algo inmediato o genérico:</strong> redactamos cada carta a medida para tu peque, por lo que necesitamos entre 24 y 72 horas para preparar su magia. No vendemos plantillas masivas.</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section id="faq" class="py-16 md:py-24 bg-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-elf-green font-bold text-sm uppercase tracking-widest bg-elf-green/10 px-3 py-1 rounded-full">Resuelve tus dudas</span>
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-elf-green mt-3 mb-4">
+                    ❓ Preguntas Frecuentes
+                </h2>
+            </div>
+
+            <!-- Accordion Items -->
+            <div class="space-y-4 mb-16">
+                
+                <!-- FAQ 1 -->
+                <div class="border border-gray-200 rounded-2xl overflow-hidden shadow-sm">
+                    <button onclick="toggleFaq('faq-1')" class="w-full bg-elf-cream hover:bg-elf-parchment p-5 text-left font-serif font-bold text-elf-green text-base md:text-lg flex items-center justify-between transition">
+                        <span>¿Y si a mi hijo no le gusta mucho leer?</span>
+                        <i id="faq-1-icon" class="fa-solid fa-chevron-down text-elf-gold transition transform"></i>
+                    </button>
+                    <div id="faq-1" class="hidden p-5 bg-white text-gray-600 text-sm md:text-base leading-relaxed border-t border-gray-100">
+                        ¡Es la trampa perfecta! Al ver que la carta trae su nombre, habla de su mascota o de lo que hizo la semana pasada, la curiosidad rompe cualquier resistencia. Leerá por puro placer sin darse cuenta de que está practicando.
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="border border-gray-200 rounded-2xl overflow-hidden shadow-sm">
+                    <button onclick="toggleFaq('faq-2')" class="w-full bg-elf-cream hover:bg-elf-parchment p-5 text-left font-serif font-bold text-elf-green text-base md:text-lg flex items-center justify-between transition">
+                        <span>No tengo tiempo libre en mi día a día para ponerme a preparar o gestionar esta dinámica...</span>
+                        <i id="faq-2-icon" class="fa-solid fa-chevron-down text-elf-gold transition transform"></i>
+                    </button>
+                    <div id="faq-2" class="hidden p-5 bg-white text-gray-600 text-sm md:text-base leading-relaxed border-t border-gray-100">
+                        ¡Es que no tienes que gestionar NADA! Entendemos tu cansancio al final del día: esta es una solución 100% llave en mano. El trabajo pesado de invención, redacción y diseño ya lo hemos hecho nosotros. Tu único trabajo consiste en coger la carta del día y dejarla sobre la mesa, bajo la almohada o en el árbol. Te llevará exactamente 5 segundos. Cero preparación, cero desorden y cero estrés.
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="border border-gray-200 rounded-2xl overflow-hidden shadow-sm">
+                    <button onclick="toggleFaq('faq-3')" class="w-full bg-elf-cream hover:bg-elf-parchment p-5 text-left font-serif font-bold text-elf-green text-base md:text-lg flex items-center justify-between transition">
+                        <span>Para leer en papel ya le compro libros en la librería, ¿por qué invertir en esto?</span>
+                        <i id="faq-3-icon" class="fa-solid fa-chevron-down text-elf-gold transition transform"></i>
+                    </button>
+                    <div id="faq-3" class="hidden p-5 bg-white text-gray-600 text-sm md:text-base leading-relaxed border-t border-gray-100">
+                        Porque no estás comprando folios impresos, estás comprando la ilusión de un ritual inmersivo. Un libro convencional suele quedarse acumulando polvo en la estantería porque se siente como "deberes". En cambio, recibir un sobre sellado desde el Polo Norte dirigido a su nombre genera una experiencia interactiva que activa su imaginación, involucra a toda la familia y crea un recuerdo de infancia que ningún libro comercial puede igualar.
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="border border-gray-200 rounded-2xl overflow-hidden shadow-sm">
+                    <button onclick="toggleFaq('faq-4')" class="w-full bg-elf-cream hover:bg-elf-parchment p-5 text-left font-serif font-bold text-elf-green text-base md:text-lg flex items-center justify-between transition">
+                        <span>No me da la vida por las noches para ponerme a descifrar historias largas con el niño.</span>
+                        <i id="faq-4-icon" class="fa-solid fa-chevron-down text-elf-gold transition transform"></i>
+                    </button>
+                    <div id="faq-4" class="hidden p-5 bg-white text-gray-600 text-sm md:text-base leading-relaxed border-t border-gray-100">
+                        Tranquilidad total: no hemos diseñado un libro de texto. Las cartas están creadas bajo el concepto de "micro-dosis de lectura de 5 minutos". Son relatos breves, ágiles y súper adictivos pensados para que el peque los lea rápido, disfrute de la emoción del día y se vaya a la cama relajado. Es el punto final perfecto para cerrar el día con paz, no con discusiones.
+                    </div>
+                </div>
+
+                <!-- FAQ 5 -->
+                <div class="border border-gray-200 rounded-2xl overflow-hidden shadow-sm">
+                    <button onclick="toggleFaq('faq-5')" class="w-full bg-elf-cream hover:bg-elf-parchment p-5 text-left font-serif font-bold text-elf-green text-base md:text-lg flex items-center justify-between transition">
+                        <span>Si dura solo 25 días, ¿la motivación no se perderá en cuanto se acaben las cartas?</span>
+                        <i id="faq-5-icon" class="fa-solid fa-chevron-down text-elf-gold transition transform"></i>
+                    </button>
+                    <div id="faq-5" class="hidden p-5 bg-white text-gray-600 text-sm md:text-base leading-relaxed border-t border-gray-100">
+                        Al contrario: las cartas funcionan como el activador del hábito de lectura. Romper la inercia del enganche a las pantallas es lo más difícil, pero cuando un niño experimenta durante 25 días seguidos la intriga, la emoción y el placer de descubrir una historia en papel, su "chip" mental cambia por completo. El Elfo le abre la puerta al mundo analógico; después de diciembre, dar el salto a los libros tradicionales será infinitamente más fácil.
+                    </div>
+                </div>
+
+                <!-- FAQ 6 -->
+                <div class="border border-gray-200 rounded-2xl overflow-hidden shadow-sm">
+                    <button onclick="toggleFaq('faq-6')" class="w-full bg-elf-cream hover:bg-elf-parchment p-5 text-left font-serif font-bold text-elf-green text-base md:text-lg flex items-center justify-between transition">
+                        <span>¿Qué pasa si ya tengo el muñeco del Elfo de otros años?</span>
+                        <i id="faq-6-icon" class="fa-solid fa-chevron-down text-elf-gold transition transform"></i>
+                    </button>
+                    <div id="faq-6" class="hidden p-5 bg-white text-gray-600 text-sm md:text-base leading-relaxed border-t border-gray-100">
+                        ¡Mucho mejor! No tienes que tirarlo. Las cartas justifican que el Elfo está "de viaje" o que este año su misión es traerle noticias del Polo Norte. El muñeco simplemente sostiene la carta cada mañana y tú te ahorras buscar ideas de travesuras a medianoche.
+                    </div>
+                </div>
+
+                <!-- FAQ 7 -->
+                <div class="border border-gray-200 rounded-2xl overflow-hidden shadow-sm">
+                    <button onclick="toggleFaq('faq-7')" class="w-full bg-elf-cream hover:bg-elf-parchment p-5 text-left font-serif font-bold text-elf-green text-base md:text-lg flex items-center justify-between transition">
+                        <span>¿Tiene que recibir las 25 cartas obligatoriamente? ¿Qué pasa si preferimos que el Elfo llegue antes del 25 de Diciembre?</span>
+                        <i id="faq-7-icon" class="fa-solid fa-chevron-down text-elf-gold transition transform"></i>
+                    </button>
+                    <div id="faq-7" class="hidden p-5 bg-white text-gray-600 text-sm md:text-base leading-relaxed border-t border-gray-100">
+                        ¡No hay ningún problema! La aventura se adapta 100% a vuestro ritmo familiar. Cada carta hace alusión a lo que ocurrió en los días anteriores, pero nunca a situaciones que están por venir. Esto te da libertad total: puedes entregar las 25 cartas completas desde el 1 de diciembre, o hacer que el Elfo "aparezca" a mitad de mes si lo prefieres. La historia seguirá teniendo todo el sentido y la experiencia será exactamente igual de mágica.
+                    </div>
+                </div>
+
+                <!-- FAQ 8 -->
+                <div class="border border-gray-200 rounded-2xl overflow-hidden shadow-sm">
+                    <button onclick="toggleFaq('faq-8')" class="w-full bg-elf-cream hover:bg-elf-parchment p-5 text-left font-serif font-bold text-elf-green text-base md:text-lg flex items-center justify-between transition">
+                        <span>¿Cómo funciona el formato PDF vs. Envío Físico?</span>
+                        <i id="faq-8-icon" class="fa-solid fa-chevron-down text-elf-gold transition transform"></i>
+                    </button>
+                    <div id="faq-8" class="hidden p-5 bg-white text-gray-600 text-sm md:text-base leading-relaxed border-t border-gray-100">
+                        Si eliges PDF, recibes en tu correo las 25 cartas maquetadas para imprimir en casa en folio o cartulina. Si eliges Físico o Premium, te enviamos el paquete listo con las cartas impresas en alta calidad y guardadas en sus sobres enumerados del 1 al 25.
+                    </div>
+                </div>
+
+                <!-- FAQ 9 -->
+                <div class="border border-gray-200 rounded-2xl overflow-hidden shadow-sm">
+                    <button onclick="toggleFaq('faq-9')" class="w-full bg-elf-cream hover:bg-elf-parchment p-5 text-left font-serif font-bold text-elf-green text-base md:text-lg flex items-center justify-between transition">
+                        <span>¿Cuánto tarda en llegar el pedido?</span>
+                        <i id="faq-9-icon" class="fa-solid fa-chevron-down text-elf-gold transition transform"></i>
+                    </button>
+                    <div id="faq-9" class="hidden p-5 bg-white text-gray-600 text-sm md:text-base leading-relaxed border-t border-gray-100">
+                        El PDF se entrega en tu email en 24-72 horas. Los paquetes físicos tardan 1 semana aproximadamente. ¡Haz tu pedido antes de finales de noviembre para asegurar que el Elfo empiece el día 1!
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Guarantee Banner -->
+            <div class="bg-elf-parchment border-2 border-elf-gold/50 rounded-3xl p-8 shadow-md">
+                <div class="flex flex-col md:flex-row items-center gap-6">
+                    <div class="w-16 h-16 rounded-full bg-elf-green text-elf-gold flex items-center justify-center text-3xl shrink-0 shadow">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-serif font-bold text-elf-green mb-2">🛡️ Política sobre Garantía y Devoluciones</h3>
+                        <p class="text-gray-700 text-sm leading-relaxed">
+                            <strong>Nota sobre productos personalizados:</strong> Debido a que redactamos, diseñamos e imprimimos cada mazo de cartas 100% personalizado con los datos únicos de tu hijo/a, no nos es posible aceptar devoluciones ni realizar reembolsos de dinero una vez procesado el pedido. Nos aseguramos de revisar cada detalle para que la experiencia sea mágica e impecable desde el primer día.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="bg-elf-green text-white py-12 border-t border-elf-gold/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-elf-gold flex items-center justify-center text-elf-green font-bold text-xl shadow">
+                    🎄
+                </div>
+                <div>
+                    <span class="font-serif font-bold text-lg text-elf-lightgold block leading-none">Cartas del Elfo Viajero</span>
+                    <span class="text-xs text-white/70">© 2026 Todos los derechos reservados.</span>
+                </div>
+            </div>
+
+            <div class="flex items-center space-x-6 text-xs text-white/80">
+                <a href="#solucion" class="hover:text-elf-lightgold transition">¿Por qué funciona?</a>
+                <a href="#como-funciona" class="hover:text-elf-lightgold transition">¿Cómo funciona?</a>
+                <a href="#precios" class="hover:text-elf-lightgold transition">Precios</a>
+                <a href="#faq" class="hover:text-elf-lightgold transition">FAQ</a>
+            </div>
+        </div>
+    </footer>
+
+    <div id="checkoutModal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-lg w-full p-6 md:p-8 relative shadow-2xl border-2 border-elf-gold animate-fadeIn">
+            <button onclick="closeCheckoutModal()" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-gray-100 text-gray-500 hover:bg-gray-200 flex items-center justify-center text-lg font-bold">
+                ✕
+            </button>
+
+            <div class="text-center mb-6">
+                <div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-elf-cream text-elf-red text-2xl mb-3 border border-elf-gold/40">
+                    ✨
+                </div>
+                <h3 class="text-2xl font-serif font-bold text-elf-green">Reservar Experiencia Mágica</h3>
+                <p id="selectedOptionTitle" class="text-xs font-bold text-elf-red uppercase tracking-wider mt-1">
+                    Opción Seleccionada
+                </p>
+            </div>
+
+            <form onsubmit="handleModalSubmit(event)" class="space-y-4 text-left">
+                <div>
+                    <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Nombre del Padre / Madre</label>
+                    <input type="text" required placeholder="Ej. María García" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-elf-green focus:border-transparent outline-none text-sm">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Nombre de tu Peque</label>
+                    <input type="text" required placeholder="Ej. Lucía" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-elf-green focus:border-transparent outline-none text-sm">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Correo Electrónico</label>
+                    <input type="email" required placeholder="tu@email.com" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-elf-green focus:border-transparent outline-none text-sm">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Teléfono / WhatsApp</label>
+                    <input type="tel" required placeholder="+34 600 000 000" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-elf-green focus:border-transparent outline-none text-sm">
+                </div>
+
+                <div class="pt-2">
+                    <button type="submit" class="w-full bg-elf-brightred hover:bg-red-600 text-white font-extrabold py-4 px-6 rounded-xl transition text-center shadow-lg cta-glow text-base">
+                        ¡Continuar con la Reserva!
+                    </button>
+                </div>
+
+                <p class="text-[11px] text-gray-500 text-center leading-tight">
+                    🔒 Tus datos están protegidos. Nos pondremos en contacto contigo de inmediato para la personalización.
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function toggleFaq(faqId) {
+            const faqContent = document.getElementById(faqId);
+            const faqIcon = document.getElementById(faqId + '-icon');
+            
+            if (faqContent.classList.contains('hidden')) {
+                faqContent.classList.remove('hidden');
+                faqIcon.classList.add('rotate-180');
+            } else {
+                faqContent.classList.add('hidden');
+                faqIcon.classList.remove('rotate-180');
+            }
+        }
+
+        function openCheckoutModal(optionName) {
+            document.getElementById('selectedOptionTitle').innerText = optionName;
+            document.getElementById('checkoutModal').classList.remove('hidden');
+        }
+
+        function closeCheckoutModal() {
+            document.getElementById('checkoutModal').classList.add('hidden');
+        }
+
+        function handleModalSubmit(event) {
+            event.preventDefault();
+            const option = document.getElementById('selectedOptionTitle').innerText;
+            alert('¡Gracias por tu reserva! Nos pondremos en contacto contigo de inmediato para preparar la magia de tu peque.');
+            closeCheckoutModal();
+        }
+    </script>
+</body>
+</html>
